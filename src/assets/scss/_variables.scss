@@ -1,0 +1,35 @@
+// Fonts___________________________________________________________________
+$primary-font: "Roboto", sans-serif;
+
+// Colors________________________________________________________________
+// - primary
+$primary-color: #4596cb;
+
+// - secondary
+$secondary-color: #115989;
+
+// - body
+$body-color: #fafafa;
+
+// - light colors
+$light-color: #f4f4f4;
+
+// - dark colors
+$dark-color: #333;
+
+// - standard
+$black: #000;
+$white: #fff;
+
+// - set Text Color
+@function set-text-color($color) {
+	@if (lightness($color) > 50) {
+		@return #333;
+	} @else {
+		@return #fff;
+	}
+}
+
+// Other________________________________________________________________
+// - menu
+$website-width: 1200px;
