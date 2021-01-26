@@ -53,6 +53,7 @@ function scssCompile() {
 		.pipe(sourcemaps.init())
 		.pipe(sass().on("error", sass.logError))
 		.pipe(postcss([autoprefixer(), cssnano()]))
+		.pipe(concat("main.css"))
 		.pipe(sourcemaps.write("."))
 		.pipe(dest(srcPaths.CSSPath))
 		.pipe(browserSync.stream());
